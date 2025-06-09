@@ -40,10 +40,22 @@ Everything is set up to be able to run the application as soon as its deployed.
 
 Run `azd up`
 
+When prompted:
+- Select an Azure Subscription to use:                      1. <name here>                  
+- Select an Azure location to use:                          48. (US) East US (eastus)
+- Pick a resource group to use:                             1. Create a new resource group
+- Enter a name for the new resource group (rg-convo-miner): <enter>
+
+Takes about 10 minutes
+
 if get validation error requiring resource group tags of owner/purpose then ask JT to remove the policy requiring that...azure.yaml file that azd uses doesnt not support setting tags (though you could create the resource group first manually, set tags then run azd up)
 
+If get this error, ignore as its only console writing the app url
+
+ERROR: error executing step command 'provision': failed running post hooks: 'postprovision' hook failed with exit code: '0', Path: 'C:\Users\TOBYST~1\AppData\Local\Temp\azd-postprovision-1577937485.ps1'. : executable file not found in %PATH%
+
 # Run the app
-Go to the App service deployed and get its URL and open it up. The app is ready to go to chat (see DevelopmentGuide.md for example chat questions to ask).
+Go to the region and find the App service whose name is "app-*" and open its URL. The app is ready to go to chat (see DevelopmentGuide.md for example chat questions to ask).
 
 In my tests, with 150k TPM, I was able to ask 3 questions in a minute before hitting rate limit
 
@@ -55,3 +67,9 @@ or
 `azd down --purge` (to permanently delete resources allowing soft delete, like KV/AIService)
 
 *took 27 minutes
+
+If you want to update this repo from the repo forked from, run this:
+
+`git remote add upstream https://github.com/microsoft/Conversation-Knowledge-Mining-Solution-Accelerator.git`
+
+...then can rebase via `git pull origin upstream`
