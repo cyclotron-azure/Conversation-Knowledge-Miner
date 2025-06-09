@@ -72,4 +72,4 @@ If you want to update this repo from the repo forked from, run this:
 
 `git remote add upstream https://github.com/microsoft/Conversation-Knowledge-Mining-Solution-Accelerator.git`
 
-...then can rebase via `git pull origin upstream`
+...then can rebase via `git pull upstream main`
