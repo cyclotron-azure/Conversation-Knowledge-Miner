@@ -41,10 +41,10 @@ Everything is set up to be able to run the application as soon as its deployed.
 Run `azd up`
 
 When prompted:
-- Select an Azure Subscription to use:                      1. <name here>                  
+- Select an Azure Subscription to use:                      1. \<name here>                  
 - Select an Azure location to use:                          48. (US) East US (eastus)
 - Pick a resource group to use:                             1. Create a new resource group
-- Enter a name for the new resource group (rg-convo-miner): <enter>
+- Enter a name for the new resource group (rg-convo-miner): \<enter>
 
 Takes about 10 minutes
 
