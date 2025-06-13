@@ -23,6 +23,7 @@ Before running `azd up`, we want some env vars set correctly so the resources ge
 A default environment is required. It can be set indirectly when running other commands. The easiest is to set an environment variable for something we already need to change, and it will prompt you to set the environment.
 
 Update TPM capacity: default capacity is 30 but we need ~50 for a single LLM request so if have capacity, they recommend 150:
+
 `azd env set AZURE_OPEN_AI_DEPLOYMENT_MODEL_CAPACITY 150`
 
 Now you get prompted to set the environment, supply the value `convo-miner` (we dont need to do dev/qa/etc since just demo)
@@ -53,6 +54,8 @@ if get validation error requiring resource group tags of owner/purpose then ask 
 If get this error, ignore as its only console writing the app url
 
 ERROR: error executing step command 'provision': failed running post hooks: 'postprovision' hook failed with exit code: '0', Path: 'C:\Users\TOBYST~1\AppData\Local\Temp\azd-postprovision-1577937485.ps1'. : executable file not found in %PATH%
+
+Note: At this time, your .env file, will be fully populated automatically, in \<your custom environment>
 
 # Run the app
 Go to the region and find the App service whose name is "app-*" and open its URL. The app is ready to go to chat (see DevelopmentGuide.md for example chat questions to ask).
