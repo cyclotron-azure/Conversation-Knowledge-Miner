@@ -63,7 +63,7 @@ Go to the region and find the App service whose name is "app-*" and open its URL
 In my tests, with 150k TPM, I was able to ask 3 questions in a minute before hitting rate limit
 
 # Destroy resources
-`azd down` 
+`azd down --force` 
 
 or 
 
